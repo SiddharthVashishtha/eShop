@@ -1,0 +1,129 @@
+<!-- navbar -->
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white py-2 fixed-top">
+    <div class="container">
+        <a class="navbar-brand order-lg-0" href="index.html">
+            <img src="https://png.pngtree.com/png-clipart/20200701/original/pngtree-shopping-mall-logo-png-image_5406131.jpg"
+                alt="site icon" style="width:60px;height:60px;">
+            <span class="text-uppercas fw-lighter ms-2">eShop</span>
+        </a>
+
+        <div class="order-lg-2 nav-btns">
+            <button type="button" class="btn position-relative">
+                <a href="{% url 'cart' %}"><i class="fa fa-shopping-cart"></i></a>
+                <span class="position-absolute top-0 start-100 translate-middle badge bg-primary">3</span>
+            </button>
+            <button type="button" class="btn position-relative">
+                <a href=""><i class="fa fa-heart"></i></a>
+                <span class="position-absolute top-0 start-100 translate-middle badge bg-primary">5</span>
+            </button>
+            <button type="button" class="btn position-relative">
+                <a href=""><i class="fa fa-search"></i></a>
+            </button>
+            <button type="button" class="btn position-relative">
+                <a href=""> <i class="fas fa-user fa-lg"></i> </a>
+            </button>
+
+        </div>
+
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse order-lg-1" id="navMenu">
+            <ul class="navbar-nav mx-auto text-center">
+
+                <li class="nav-item px-2 py-2">
+                    <a class="nav-link text-uppercase text-dark" href="{% url 'index' %}">Home</a>
+                </li>
+                <li class="nav-item px-2 py-2">
+                    <a class="nav-link text-uppercase text-dark" href="{% url 'furniture' %}">Furniture</a>
+                </li>
+                <li class="nav-item px-2 py-2">
+                    <a class="nav-link text-uppercase text-dark" href="{% url 'products' %}">Products</a>
+                </li>
+                <li class="nav-item px-2 py-2">
+                    <a class="nav-link text-uppercase text-dark" href="{% url 'accessories' %}">Accessories</a>
+                </li>
+                <li class="nav-item px-2 py-2">
+                    <a class="nav-link text-uppercase text-dark" href="{% url 'contact' %}">Contact</a>
+                </li>
+                <li class="nav-item dropdown px-2 py-2">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        More
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#SpecialCollection">Special Collection</a></li>
+                        <li><a class="dropdown-item" href="#blogs">blogs</a></li>
+                        <li><a class="dropdown-item" href="#about">About Us</a></li>
+                        <li><a class="dropdown-item" href="#">Reviews</a></li>
+                    </ul>
+
+                    
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <button type="button" class="btn">
+                            <i class="fas fa-user fa-lg"></i>
+                        </button>
+                    </a>
+                    <ul class="dropdown-menu">
+                        {% if 'userid' in request.session %}
+                        <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                        </li>
+                        {% else %}
+                        <li><a class="dropdown-item" href="{% url 'register' %}">Register</a>
+                            <a class="dropdown-item" href="{% url 'login' %}">Login</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </li>
+
+
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="btn btn-outline-light login-signup" href="{% url 'register' %}">Register</a>
+        </a>
+        <ul class="dropdown-menu">
+            {% if 'userid' in request.session %}
+            <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+            {% else %}
+            <li><a class="dropdown-item" href="{% url 'login' %}">sign in/sign up</a></li>
+            {% endif %}
+        </ul>
+    </li> -->
+
+    <!-- <div class="d-flex flex-lg-row flex-sm-column justify-content-sm-start align-items-sm-start navbar-collapse gap-2">
+
+        {% if 'userid' in request.session %}
+
+        <a class="btn btn-outline-light login-signup" href="{% url 'logout' %}" style="margin-left: 25px;">Logout</a>
+
+        {% else %}
+
+        <a class="btn btn-outline-light login-signup" href="{% url 'register' %}">Register</a>
+        <a class="btn btn-outline-light login-signup" href="{% url 'login' %}">Login</a>
+
+        {% endif %}
+    </div> -->
+</nav>
+
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0 py-0" role="alert">
+    <strong>{{ message }}</strong>
+    <button type="button" class="close" data-dismiss="alert">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+{% endfor %}
+{% endif %}
+
+<!-- end of navbar -->

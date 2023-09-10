@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eShop Login</title>
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="{% static 'bootstrap-5.0.2-dist/css/bootstrap.min.css' %}">
+    <!-- custom css -->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <style>
+        body {
+            margin-top: 120px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- navbar -->
+
+    {% include 'navbar.html' %}
+
+    <!-- end of navbar -->
+
+
+
+    <div class="container d-flex flex-column align-items-center justify-content-center my-5 ">
+        <div class="border p-3  rounded-4 w-md-100" style="width:30rem ;border-radius:15px;">
+            <div class="d-flex flex-column align-items-center p-2">
+                <img src="{% static 'img/favicon.png' %}" width="65px" height="65px" alt="Here may be an image of cart">
+                <h2 class="my-2 fw-bold text-uppercase">Login</h2>
+                <span>Welcome Back! Login to Your Account</span>
+            </div>
+            <form class="d-flex w-full b flex-column gap-4 p-4" action="{% url 'loginn' %}" method="POST">
+                {% csrf_token %}
+                <div>
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" name="email" class="form-control">
+                </div>
+                <!-- PAssword -->
+                <div>
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" name="password" class="form-control">
+                </div>
+
+                <!-- don't have an account? -->
+                <div class="d-flex align-items-center justify-content-center">
+
+                    <span>Don't Have an Account? </span> <a href="{% url 'register' %}" class="text-link">Signup</a>
+                </div>
+                <button class="btn btn-outline-light login-signup">Login</button>
+
+            </form>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+
+    {% include 'footer.html' %}
+
+    <!-- end of footer -->
+
+</body>
+
+</html>

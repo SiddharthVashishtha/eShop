@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>eShop Login</title>
+  <!-- fontawesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="{% static 'bootstrap-5.0.2-dist/css/bootstrap.min.css' %}">
+  <!-- custom css -->
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <style>
+    body {
+      margin-top: 90px;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <!-- navbar -->
+
+  {% include 'navbar.html' %}
+
+  <!-- end of navbar -->
+
+
+
+
+  <!-- product section  -->
+  <section id="products" class="products">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- product info -->
+        <div class="col-10 mx-auto col-md-5 col-lg-3 text-capitalize my-3 px-5">
+          <!-- products categories -->
+          <div class="products-categories-title my-4">
+            <h6 class="text-uppercase">
+              shop by categories
+            </h6>
+            <div class="products-categories-underline"></div>
+          </div>
+          <!-- end of title -->
+          <!-- single link -->
+          <a href="#" class="products-category-link d-block">
+            <p class="mb-0">
+              Jeans
+            </p>
+          </a>
+          <a href="#" class="products-category-link d-block">
+            <p class="mb-0">
+              Shirt
+            </p>
+          </a>
+          <a href="#" class="products-category-link d-block">
+            <p class="mb-0">
+              T-shirt
+            </p>
+          </a>
+          <a href="#" class="products-category-link d-block">
+            <p class="mb-0">
+              Kurta
+            </p>
+          </a>
+          <a href="#" class="products-category-link d-block">
+            <p class="mb-0">
+              Trousers
+            </p>
+          </a>
+          <!-- end of single link -->
+          <div class="products-categories-title my-4">
+            <h6 class="text-uppercase">
+              shop by price
+            </h6>
+            <div class="products-categories-underline"></div>
+          </div>
+          <!-- end of title -->
+          <form action="">
+            <div class="form-group">
+              <label for="price-range">Range : Rs. 0 - Rs. 4990</label>
+              <input type="range" class="form-control-range" id="price-range">
+            </div>
+            <div class="input-group">
+              <div class="input-group-prepend">
+                <span class="input-group-text form-icon">
+                  <i class="fas fa-search fa-lg"></i>
+                </span>
+              </div>
+              <input type="text" class="form-control text-capitalize" placeholder="search by name">
+            </div>
+          </form>
+          <div class="products-categories-title my-4">
+            <h6 class="text-uppercase">
+              shop by color
+            </h6>
+            <div class="products-categories-underline"></div>
+          </div>
+          <!-- single color -->
+          <a href="#">
+            <p class="text-capitalize mb-0">
+              <span class="d-inline-block products-color products-color-black mr-2">
+              </span>
+              black (5)
+            </p>
+          </a>
+          <!-- end of single color -->
+          <!-- single color -->
+          <a href="#">
+            <p class="text-capitalize mb-0">
+              <span class="d-inline-block products-color products-color-red mr-2">
+              </span>
+              red (6)
+            </p>
+          </a>
+          <!-- end of single color -->
+          <!-- single color -->
+          <a href="#">
+            <p class="text-capitalize mb-0">
+              <span class="d-inline-block products-color products-color-blue mr-2">
+              </span>
+              blue (10)
+            </p>
+          </a>
+          <!-- end of single color -->
+          <!-- single color -->
+          <a href="#">
+            <p class="text-capitalize mb-0">
+              <span class="d-inline-block products-color products-color-yellow mr-2">
+              </span>
+              yellow (3)
+            </p>
+          </a>
+          <!-- end of single color -->
+          <!-- single color -->
+          <a href="#">
+            <p class="text-capitalize mb-0">
+              <span class="d-inline-block products-color products-color-green mr-2">
+              </span>
+              green (7)
+            </p>
+          </a>
+          <!-- end of single color -->
+          <!-- end of title -->
+          <!-- end of products categories -->
+        </div>
+        <!-- end of product info -->
+        <!-- product img -->
+        <div class="col-10 mx-auto col-md-7 col-lg-9 my-3">
+          <div class="row">
+            <!-- single product -->
+            <div class="col-10 mx-auto col-md-6 col-lg-4">
+              <div class="featured-container p-5">
+                <img src="https://images.meesho.com/images/products/259644533/alrv4_512.webp" alt="" class="img-fluid">
+                <a href="{% url 'singleproduct' %}" class="btn btn-primary mt-3 fbtn">Add to Cart</a>
+              </div>
+              <h6 class="text-capitalize text-center my-2">
+                special product
+              </h6>
+              <h6 class="text-center">
+                <span class="text-muted old-price mx-2">Rs. 899</span>
+                <span>Rs. 499</span>
+              </h6>
+            </div>
+            <!-- end of single product -->
+            <!-- single product -->
+            <div class="col-10 mx-auto col-md-6 col-lg-4">
+              <div class="featured-container p-5">
+                <img
+                  src="https://embed.widencdn.net/img/rocelec/1bctb8yvgy/640px/dpak6p170_1524x483l228x78t788x673_txn_n.step.png?keep=c&crop=yes&u=5oefqw"
+                  alt="" class="img-fluid">
+                <a href="#" class="btn btn-primary mt-3 fbtn">Add to Cart</a>
+              </div>
+              <h6 class="text-capitalize text-center my-2">
+                special product
+              </h6>
+              <h6 class="text-center">
+                <span class="text-muted old-price mx-2">Rs. 899</span>
+                <span>Rs. 499</span>
+              </h6>
+            </div>
+            <!-- end of single product -->
+            <!-- single product -->
+            <div class="col-10 mx-auto col-md-6 col-lg-4">
+              <div class="featured-container p-5">
+                <img src="https://m.media-amazon.com/images/I/51s+qoamMJL._AC_UF350,350_QL80_.jpg" alt=""
+                  class="img-fluid">
+                <a href="#" class="btn btn-primary mt-3 fbtn">Add to Cart</a>
+              </div>
+              <h6 class="text-capitalize text-center my-2">
+                special product
+              </h6>
+              <h6 class="text-center">
+                <span class="text-muted old-price mx-2">Rs. 899</span>
+                <span>Rs. 499</span>
+              </h6>
+            </div>
+            <!-- end of single product -->
+            <!-- single product -->
+            <div class="col-10 mx-auto col-md-6 col-lg-4">
+              <div class="featured-container p-5">
+                <img src="https://cdn.shakedeal.com/images/detailed/664/SDBAJ0142500_gjg3-fs.png" alt=""
+                  class="img-fluid">
+                <a href="#" class="btn btn-primary mt-3 fbtn">Add to Cart</a>
+              </div>
+              <h6 class="text-capitalize text-center my-2">
+                special product
+              </h6>
+              <h6 class="text-center">
+                <span class="text-muted old-price mx-2">Rs. 899</span>
+                <span>Rs. 499</span>
+              </h6>
+            </div>
+            <!-- end of single product -->
+            <!-- single product -->
+            <div class="col-10 mx-auto col-md-6 col-lg-4">
+              <div class="featured-container p-5">
+                <img
+                  src="https://cdn-cipdf.nitrocdn.com/xjhmXquLyfDFZwlxvyxlwKoGWleTFNkb/assets/images/optimized/rev-1cef3fd/wp-content/uploads/2018/07/nivelswiss-d-digital-inclinometer-54-800-000-1.png"
+                  alt="" class="img-fluid">
+                <a href="#" class="btn btn-primary mt-3 fbtn">Add to Cart</a>
+              </div>
+              <h6 class="text-capitalize text-center my-2">
+                special product
+              </h6>
+              <h6 class="text-center">
+                <span class="text-muted old-price mx-2">Rs. 899</span>
+                <span>Rs. 499</span>
+              </h6>
+            </div>
+            <!-- end of single product -->
+            <!-- single product -->
+            <div class="col-10 mx-auto col-md-6 col-lg-4">
+              <div class="featured-container p-5">
+                <img src="https://cpimg.tistatic.com/02201057/b/4/ACC-Relay-24V-30-Amps.jpg" alt="" class="img-fluid">
+                <a href="#" class="btn btn-primary mt-3 fbtn">Add to Cart</a>
+              </div>
+              <h6 class="text-capitalize text-center my-2">
+                special product
+              </h6>
+              <h6 class="text-center">
+                <span class="text-muted old-price mx-2">Rs. 899</span>
+                <span>Rs. 499</span>
+              </h6>
+            </div>
+            <!-- end of single product -->
+          </div>
+        </div>
+        <!-- end of product img -->
+      </div>
+    </div>
+  </section>
+  <!-- end of product section  -->
+
+
+
+  <!-- collection -->
+  <section id="featured" class="py-5">
+    <div class="container">
+      <div class="title text-center">
+        <h2 class="position-relative d-inline-block">Featured Products</h2>
+      </div>
+
+      <div class="row g-0">
+        <div class="d-flex flex-wrap justify-content-center mt-5 filter-button-group">
+          <button type="button" class="btn m-2 text-dark active-filter-btn" data-filter="*">All</button>
+          <button type="button" class="btn m-2 text-dark" data-filter=".best">Best Sellers</button>
+          <button type="button" class="btn m-2 text-dark" data-filter=".feat">Featured</button>
+          <button type="button" class="btn m-2 text-dark" data-filter=".new">New Arrival</button>
+        </div>
+
+        <div class="collection-list mt-4 row gx-0 gy-3">
+          <div class="col-md-6 col-lg-4 col-xl-3 p-2 best">
+            <div class="collection-img position-relative">
+              <img src="{% static 'images/Formal_shirt.png' %}" class="w-100" style="width:100px;height:300px; >
+                          <span class = " position-absolute bg-primary text-white d-flex align-items-center
+                justify-content-center">sale</span>
+            </div>
+            <div class="text-center">
+              <div class="rating mt-3">
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+              </div>
+              <p class="text-capitalize my-1">Pink Formal shirt</p>
+              <span class="fw-bold">RS. 999.00</span>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 col-xl-3 p-2 feat">
+            <div class="collection-img position-relative">
+              <img src="{% static 'images/c_pant_girl.png' %}" class="w-100" style="width:100px;height:300px; >
+                          <span class = " position-absolute bg-primary text-white d-flex align-items-center
+                justify-content-center">sale</span>
+            </div>
+            <div class="text-center">
+              <div class="rating mt-3">
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+              </div>
+              <p class="text-capitalize my-1">Blue Jeans</p>
+              <span class="fw-bold">RS. 999.00</span>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 col-xl-3 p-2 new">
+            <div class="collection-img position-relative">
+              <img src="{% static 'images/polo t-shirt.png' %}" class="w-100" style="width:100px;height:300px;>
+                          <span class = " position-absolute bg-primary text-white d-flex align-items-center
+                justify-content-center">sale</span>
+            </div>
+            <div class="text-center">
+              <div class="rating mt-3">
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+              </div>
+              <p class="text-capitalize my-1">Polo Shirt</p>
+              <span class="fw-bold">RS. 999.00</span>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 col-xl-3 p-2 best">
+            <div class="collection-img position-relative">
+              <img src="{% static 'images/c_shirt-girl.png' %}" class="w-100" style="width:100px;height:300px;>
+                          <span class = " position-absolute bg-primary text-white d-flex align-items-center
+                justify-content-center">sale</span>
+            </div>
+            <div class="text-center">
+              <div class="rating mt-3">
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+              </div>
+              <p class="text-capitalize my-1">Gray Shrug</p>
+              <span class="fw-bold">RS. 999.00</span>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 col-xl-3 p-2 feat">
+            <div class="collection-img position-relative">
+              <img src="{% static 'images/fur_coat.png' %}" class="w-100" style="width:100px;height:300px;>
+                          <span class = " position-absolute bg-primary text-white d-flex align-items-center
+                justify-content-center">sale</span>
+            </div>
+            <div class="text-center">
+              <div class="rating mt-3">
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+              </div>
+              <p class="text-capitalize my-1">Fur Coat</p>
+              <span class="fw-bold">RS. 999.00</span>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 col-xl-3 p-2 new">
+            <div class="collection-img position-relative">
+              <img src="{% static 'images/c_undershirt.png' %}" class="w-100" style="width:100px;height:300px;>
+                          <span class = " position-absolute bg-primary text-white d-flex align-items-center
+                justify-content-center">sale</span>
+            </div>
+            <div class="text-center">
+              <div class="rating mt-3">
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+              </div>
+              <p class="text-capitalize my-1">Short Blouse</p>
+              <span class="fw-bold">RS. 999.00</span>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 col-xl-3 p-2 best">
+            <div class="collection-img position-relative">
+              <img src="{% static 'images/denium_skirt.jfif' %}" class="w-100" style="width:100px;height:300px;>
+                          <span class = " position-absolute bg-primary text-white d-flex align-items-center
+                justify-content-center">sale</span>
+            </div>
+            <div class="text-center">
+              <div class="rating mt-3">
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+              </div>
+              <p class="text-capitalize my-1">Denium Skirt</p>
+              <span class="fw-bold">RS. 999.00</span>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4 col-xl-3 p-2 feat">
+            <div class="collection-img position-relative">
+              <img src="{% static 'images/pink_blouse.png' %}" class="w-100" style="width:100px;height:300px;>
+                          <span class = " position-absolute bg-primary text-white d-flex align-items-center
+                justify-content-center">sale</span>
+            </div>
+            <div class="text-center">
+              <div class="rating mt-3">
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+                <span class="text-primary"><i class="fas fa-star"></i></span>
+              </div>
+              <p class="text-capitalize my-1">Pink Blouse</p>
+              <span class="fw-bold">RS. 999.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end of collection -->
+
+
+  <!-- footer -->
+
+  {% include 'footer.html' %}
+
+  <!-- end of footer -->
+
+</body>
+
+</html>

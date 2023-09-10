@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eShop Login</title>
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="{% static 'bootstrap-5.0.2-dist/css/bootstrap.min.css' %}">
+    <!-- custom css -->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <style>
+        body {
+            margin-top: 70px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- navbar -->
+
+    {% include 'navbar.html' %}
+
+    <!-- end of navbar -->
+
+    <!-- single product -->
+    <section class="single-product py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-10 mx-auto col-lg-4 my-5 text-center">
+                    <div class="single-product-img-container">
+                        <img src="https://orelmeha.ru/800/600/http/thefashionisto.com/wp-content/uploads/2013/09/antony-morato-fall-winter-2013-campaign-005.jpg"
+                            alt="" class="img-fluid">
+                    </div>
+                    <div class="row simgle-product-photos mt-3">
+                        <!-- single photo -->
+                        <div class="col-2 col-sm-2 p-1 single-product-photo">
+                            <img src="https://orelmeha.ru/800/600/http/thefashionisto.com/wp-content/uploads/2013/09/antony-morato-fall-winter-2013-campaign-005.jpg"
+                                alt="" class="img-fluid">
+                        </div>
+                        <!-- end of single photo -->
+                        <!-- single photo -->
+                        <div class="col-2 col-sm-2 p-1 single-product-photo">
+                            <img src="https://orelmeha.ru/800/600/http/thefashionisto.com/wp-content/uploads/2013/09/antony-morato-fall-winter-2013-campaign-005.jpg"
+                                alt="" class="img-fluid">
+                        </div>
+                        <!-- end of single photo -->
+                        <!-- single photo -->
+                        <div class="col-2 col-sm-2 p-1 single-product-photo">
+                            <img src="https://orelmeha.ru/800/600/http/thefashionisto.com/wp-content/uploads/2013/09/antony-morato-fall-winter-2013-campaign-005.jpg"
+                                alt="" class="img-fluid">
+                        </div>
+                        <!-- end of single photo -->
+                        <!-- single photo -->
+                        <div class="col-2 col-sm-2 p-1 single-product-photo">
+                            <img src="https://orelmeha.ru/800/600/http/thefashionisto.com/wp-content/uploads/2013/09/antony-morato-fall-winter-2013-campaign-005.jpg"
+                                alt="" class="img-fluid">
+                        </div>
+                        <!-- end of single photo -->
+                        <!-- single photo -->
+                        <div class="col-2 col-sm-2 p-1 single-product-photo">
+                            <img src="https://orelmeha.ru/800/600/http/thefashionisto.com/wp-content/uploads/2013/09/antony-morato-fall-winter-2013-campaign-005.jpg"
+                                alt="" class="img-fluid">
+                        </div>
+                        <!-- end of single photo -->
+                        <!-- single photo -->
+                        <div class="col-2 col-sm-2 p-1 single-product-photo">
+                            <img src="https://orelmeha.ru/800/600/http/thefashionisto.com/wp-content/uploads/2013/09/antony-morato-fall-winter-2013-campaign-005.jpg"
+                                alt="" class="img-fluid">
+                        </div>
+                        <!-- end of single photo -->
+                    </div>
+                </div>
+                <!-- info -->
+                <div class="col-10 col-lg-8 mx-auto px-lg-5 single-product-info my-5">
+                    <!-- ratings -->
+                    <div class="ratings">
+                        <span class="rating-icon">
+                            <i class="fas fa-star"></i>
+                        </span>
+                        <span class="rating-icon">
+                            <i class="fas fa-star"></i>
+                        </span>
+                        <span class="rating-icon">
+                            <i class="fas fa-star"></i>
+                        </span>
+                        <span class="rating-icon">
+                            <i class="fas fa-star"></i>
+                        </span>
+                        <span class="rating-icon">
+                            <i class="far fa-star"></i>
+                        </span>
+                        <span class="text-capitalize">
+                            (25 Customer Reviews)
+                        </span>
+                    </div>
+                    <!-- end of ratings -->
+                    <h2 class="text-uppercase my-2">
+                        PREMIUM OFFICE ARMCHAIR
+                    </h2>
+                    <h2 class="text-uppercase my-2">
+                        Rs. 1699
+                    </h2>
+                    <p class="lead text-muted">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, quae!
+                    </p>
+                    <!-- colors -->
+                    <h5 class="text-uppercase">
+                        colors:
+                        <span class="d-inline-block products-color products-color-black mr-2"></span>
+                        <span class="d-inline-block products-color products-color-blue mr-2"></span>
+                        <span class="d-inline-block products-color products-color-green mr-2"></span>
+                    </h5>
+                    <!-- end of colors -->
+                    <!-- size -->
+                    <h5 class="text-uppercase product-size">
+                        SIZES : XS S M L XL
+                    </h5>
+                    <!-- end of size -->
+                    <!-- cart buttons -->
+                    <div class="col-md-3 col-lg-3 col-xl-2 d-flex">
+                        <button class="btn btn-link px-2"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                            <i class="fas fa-minus"></i>
+                        </button>
+
+                        <input id="form1" min="0" name="quantity" value="1" type="number"
+                            class="form-control form-control-sm" />
+
+                        <button class="btn btn-link px-2"
+                            onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+                    <button class="btnn-black my-2 mx-1">
+                        Wishlist
+                    </button>
+                    <button class="btnn-orange ">
+                        Add To Cart
+                    </button>
+                    <!-- end of cart buttons -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of single product -->
+
+    <!-- single product info -->
+    <section class="single-product-info">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="jumbotron">
+                        <!-- products info link -->
+                        <div class="d-flex justify-content-around my-3">
+                            <a href="#" class="product-info-link">
+                                <h4 class="text-capitalize">
+                                    description
+                                </h4>
+                            </a>
+                            <a href="#" class="product-info-link">
+                                <h4 class="text-capitalize">
+                                    additional information
+                                </h4>
+                            </a>
+                            <a href="#" class="product-info-link">
+                                <h4 class="text-capitalize">
+                                    Reviews (25)
+                                </h4>
+                            </a>
+                        </div>
+                        <!-- end of products info link -->
+                        <p class="lead">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae voluptatem aperiam
+                            culpa, adipisci aspernatur fugiat, animi odio quos assumenda praesentium, doloremque
+                            consequuntur vitae repellat eos sapiente laboriosam iusto. Veritatis, enim dolore. Odit,
+                            voluptatum doloremque architecto harum at optio quas minima?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of single product info -->
+
+
+
+    <!-- collection -->
+    <section id="featured" class="py-5">
+        <div class="container">
+            <div class="title text-center">
+                <h2 class="position-relative d-inline-block">Featured Products</h2>
+            </div>
+
+            <div class="row g-0">
+                <div class="d-flex flex-wrap justify-content-center mt-5 filter-button-group">
+                    <button type="button" class="btn m-2 text-dark active-filter-btn" data-filter="*">All</button>
+                    <button type="button" class="btn m-2 text-dark" data-filter=".best">Best Sellers</button>
+                    <button type="button" class="btn m-2 text-dark" data-filter=".feat">Featured</button>
+                    <button type="button" class="btn m-2 text-dark" data-filter=".new">New Arrival</button>
+                </div>
+
+                <div class="collection-list mt-4 row gx-0 gy-3">
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-2 best">
+                        <div class="collection-img position-relative">
+                            <img src="{% static 'images/Formal_shirt.png' %}" class="w-100" style="width:100px;height:300px; >
+                            <span class = " position-absolute bg-primary text-white d-flex align-items-center
+                                justify-content-center">sale</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="rating mt-3">
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                            </div>
+                            <p class="text-capitalize my-1">Pink Formal shirt</p>
+                            <span class="fw-bold">RS. 999.00</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-2 feat">
+                        <div class="collection-img position-relative">
+                            <img src="{% static 'images/c_pant_girl.png' %}" class="w-100" style="width:100px;height:300px; >
+                            <span class = " position-absolute bg-primary text-white d-flex align-items-center
+                                justify-content-center">sale</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="rating mt-3">
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                            </div>
+                            <p class="text-capitalize my-1">Blue Jeans</p>
+                            <span class="fw-bold">RS. 999.00</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-2 new">
+                        <div class="collection-img position-relative">
+                            <img src="{% static 'images/polo t-shirt.png' %}" class="w-100" style="width:100px;height:300px;>
+                            <span class = " position-absolute bg-primary text-white d-flex align-items-center
+                                justify-content-center">sale</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="rating mt-3">
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                            </div>
+                            <p class="text-capitalize my-1">Polo Shirt</p>
+                            <span class="fw-bold">RS. 999.00</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-2 best">
+                        <div class="collection-img position-relative">
+                            <img src="{% static 'images/c_shirt-girl.png' %}" class="w-100" style="width:100px;height:300px;>
+                            <span class = " position-absolute bg-primary text-white d-flex align-items-center
+                                justify-content-center">sale</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="rating mt-3">
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                            </div>
+                            <p class="text-capitalize my-1">Gray Shrug</p>
+                            <span class="fw-bold">RS. 999.00</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-2 feat">
+                        <div class="collection-img position-relative">
+                            <img src="{% static 'images/fur_coat.png' %}" class="w-100" style="width:100px;height:300px;>
+                            <span class = " position-absolute bg-primary text-white d-flex align-items-center
+                                justify-content-center">sale</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="rating mt-3">
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                            </div>
+                            <p class="text-capitalize my-1">Fur Coat</p>
+                            <span class="fw-bold">RS. 999.00</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-2 new">
+                        <div class="collection-img position-relative">
+                            <img src="{% static 'images/c_undershirt.png' %}" class="w-100" style="width:100px;height:300px;>
+                            <span class = " position-absolute bg-primary text-white d-flex align-items-center
+                                justify-content-center">sale</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="rating mt-3">
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                            </div>
+                            <p class="text-capitalize my-1">Short Blouse</p>
+                            <span class="fw-bold">RS. 999.00</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-2 best">
+                        <div class="collection-img position-relative">
+                            <img src="{% static 'images/denium_skirt.jfif' %}" class="w-100" style="width:100px;height:300px;>
+                            <span class = " position-absolute bg-primary text-white d-flex align-items-center
+                                justify-content-center">sale</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="rating mt-3">
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                            </div>
+                            <p class="text-capitalize my-1">Denium Skirt</p>
+                            <span class="fw-bold">RS. 999.00</span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-2 feat">
+                        <div class="collection-img position-relative">
+                            <img src="{% static 'images/pink_blouse.png' %}" class="w-100" style="width:100px;height:300px;>
+                            <span class = " position-absolute bg-primary text-white d-flex align-items-center
+                                justify-content-center">sale</span>
+                        </div>
+                        <div class="text-center">
+                            <div class="rating mt-3">
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                                <span class="text-primary"><i class="fas fa-star"></i></span>
+                            </div>
+                            <p class="text-capitalize my-1">Pink Blouse</p>
+                            <span class="fw-bold">RS. 999.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of collection -->
+
+
+    <!-- footer -->
+
+    {% include 'footer.html' %}
+
+    <!-- end of footer -->
+
+</body>
+
+</html>
