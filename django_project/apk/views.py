@@ -75,4 +75,15 @@ def logout(request):
     del request.session['userid']
     messages.success(request, 'Logout successful!')
     # return render(request, 'index.html')
-    return HttpResponse('Logout successful')
+    # return HttpResponse('Logout successful')
+    return redirect('login')
+
+
+def profile(request):
+    if 'userid' in request.session:
+        profile_data = Customer.objects.get(id=request.session['userid'])
+        data = {'profile': profile_data}
+        return render(request, 'profile.html', data)
+    else:
+        messages.add_message(request, messages.ERROR, 'Please login first!')
+        return redirect('login')

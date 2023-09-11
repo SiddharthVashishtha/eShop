@@ -14,4 +14,5 @@ urlpatterns = [
     path('singleproduct/', views.singleproduct, name='singleproduct'),
     path('loginn/',views.loginn,name='loginn'),
     path('logout/', views.logout, name='logout'),
+    path('profile/', views.profile, name='profile'),
 ]

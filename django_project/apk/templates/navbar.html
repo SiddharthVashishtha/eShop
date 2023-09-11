@@ -21,9 +21,9 @@
             <button type="button" class="btn position-relative">
                 <a href=""><i class="fa fa-search"></i></a>
             </button>
-            <button type="button" class="btn position-relative">
+            <!-- <button type="button" class="btn position-relative">
                 <a href=""> <i class="fas fa-user fa-lg"></i> </a>
-            </button>
+            </button> -->
 
         </div>
 
@@ -72,6 +72,8 @@
                     <ul class="dropdown-menu">
                         {% if 'userid' in request.session %}
                         <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+                        </li>
+                        <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a>
                         </li>
                         {% else %}
                         <li><a class="dropdown-item" href="{% url 'register' %}">Register</a>
