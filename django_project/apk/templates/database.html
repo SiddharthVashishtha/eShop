@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eShop Login</title>
+    <!-- fontawesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="{% static 'bootstrap-5.0.2-dist/css/bootstrap.min.css' %}">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- custom css -->
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+    <style>
+        body {
+            margin-top: 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- navbar -->
+
+    {% include 'navbar.html' %}
+
+    <!-- end of navbar -->
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">s.no</th>
+                <th scope="col">USERNAME</th>
+                <th scope="col">EMAIL</th>
+                <th scope="col">PASSWORD</th>
+                <th scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in user_list  %}
+            <tr>
+                <!-- <th scope="row">1</th> -->
+                <td>{{forloop.counter}}</td>
+                 <td>{{i.username}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.password}}</td>
+                <td><a href="{% url 'del_user' i.id %}" class="btn btn-primary" > delete</a></td>
+                
+            </tr>
+            {% endfor %}
+            
+        </tbody>
+    </table>
+
+
+
+    <!-- footer -->
+
+    {% include 'footer.html' %}
+
+    <!-- end of footer -->
+
+
+</body>
+
+</html>

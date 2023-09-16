@@ -3,7 +3,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-white py-2 fixed-top">
     <div class="container">
-        <a class="navbar-brand order-lg-0" href="index.html">
+        <a class="navbar-brand order-lg-0" href="{% url 'index' %}">
             <img src="https://png.pngtree.com/png-clipart/20200701/original/pngtree-shopping-mall-logo-png-image_5406131.jpg"
                 alt="site icon" style="width:60px;height:60px;">
             <span class="text-uppercas fw-lighter ms-2">eShop</span>
@@ -61,10 +61,9 @@
                         <li><a class="dropdown-item" href="#">Reviews</a></li>
                     </ul>
 
-                    
+
                 <li class="nav-item dropdown">
-                    <a class="nav-link" data-bs-toggle="dropdown"
-                        aria-expanded="false">
+                    <a class="nav-link" data-bs-toggle="dropdown" aria-expanded="false">
                         <button type="button" class="btn">
                             <i class="fas fa-user fa-lg"></i>
                         </button>
@@ -117,15 +116,13 @@
     </div> -->
 </nav>
 
+<!-- end of navbar -->
+
 {% if messages %}
 {% for message in messages %}
-<div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0 py-0" role="alert">
+<div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
     <strong>{{ message }}</strong>
-    <button type="button" class="close" data-dismiss="alert">
-        <span aria-hidden="true">&times;</span>
-    </button>
-</div>
+  </div>
 {% endfor %}
 {% endif %}
-
-<!-- end of navbar -->

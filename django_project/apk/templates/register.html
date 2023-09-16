@@ -13,6 +13,10 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- bootstrap css -->
     <link rel="stylesheet" href="{% static 'bootstrap-5.0.2-dist/css/bootstrap.min.css' %}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
     <!-- custom css -->
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <style>
@@ -42,6 +46,11 @@
             </div>
             <form action="{% url 'register' %}" method="POST" class="d-flex w-full b flex-column gap-4 p-4">
                 {% csrf_token %}
+                <!-- Username -->
+                <div>
+                    <label for="username" class="form-label">Username</label>
+                    <input type="username" name="username" class="form-control">
+                </div>
                 <!-- Email -->
                 <div>
                     <label for="email" class="form-label">Email</label>
